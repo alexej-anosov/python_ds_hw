@@ -6,7 +6,7 @@ class CountVectorizer(object):
     """we get a list of unique words of the text that we get in fit_transform method 
     and length of this list
     as properties of class instance"""
-    def tokenize(self, corpus):
+    def _tokenize(self, corpus):
         for string in corpus:
             self.tokens.extend(map(lambda x: x.lower(), string.split()))
         self.tokens = list(set(self.tokens))
