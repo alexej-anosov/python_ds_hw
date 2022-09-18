@@ -1,7 +1,7 @@
 class CountVectorizer(object):
     def __init__(self):
         self._tokens = []
-        self._num_of_tokens = len(self.tokens)
+        self._num_of_tokens = len(self._tokens)
 
     """we get a list of unique words of the text that we get in fit_transform method 
     and length of this list
@@ -43,4 +43,3 @@ vectorizer = CountVectorizer()
 count_matrix = vectorizer.fit_transform(text)
 print(vectorizer.get_feature_names())
 print(count_matrix)
-
