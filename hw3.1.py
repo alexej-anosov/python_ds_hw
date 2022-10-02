@@ -6,7 +6,7 @@ class ColorizeMixin(object):
     repr_color_code = 35
 
     def __repr__(self):
-        return "\033[1;0;%im%s" % (self.repr_color_code, self._repr)
+        return "\033[1;0;%im%s\033[0m" % (self.repr_color_code, self._repr)
 
 
 """fff"""
